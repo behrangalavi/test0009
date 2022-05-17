@@ -10,4 +10,4 @@ EXPOSE 1337
 
 USER 1000
 
-CMD [ "python", "./main.py" ]
+CMD [ "python", "main.py" ]
