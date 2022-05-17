@@ -1,11 +1,10 @@
-
-from flask import Flask
-from flask import render_template
-from flask import request
-
-from flask import Flask, redirect, url_for, request
+From flask import Flask
 app = Flask(__name__)
 
-@app.route('/test', methods=['GET'])
-def test():
-    return 'it works!'
+@app.route('/')
+def hello_world:
+    return 'Hey, we have Flask in a Docker container!'
+
+
+if __name == '__main__':
+    app.run(debug=True, host='0.0.0.0')
