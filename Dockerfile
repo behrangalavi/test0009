@@ -1,9 +1,13 @@
-FROM nginxinc/nginx-unprivileged:stable-alpine 
+FROM python:3.8
 
-COPY html /usr/share/nginx/html
+COPY requirements.txt .
 
-EXPOSE 8080
+RUN pip install -r requirements.txt
 
-USER 101
+COPY . .
 
-CMD nginx -g 'daemon off;'
+EXPOSE 1337
+
+USER 1000
+
+CMD [ "python", "./main.py" ]
