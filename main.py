@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return 'Hey, we have Flask in a Docker container! %s' % (r.get_random_word())
+    return 'Random word! %s' % (r.get_random_word())
 
 
 if __name__ == "__main__":
